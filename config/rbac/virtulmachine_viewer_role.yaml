@@ -1,0 +1,20 @@
+# permissions for end users to view virtulmachines.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: virtulmachine-viewer-role
+rules:
+- apiGroups:
+  - infra.qipajun.com
+  resources:
+  - virtulmachines
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - infra.qipajun.com
+  resources:
+  - virtulmachines/status
+  verbs:
+  - get

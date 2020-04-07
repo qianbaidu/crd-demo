@@ -1,0 +1,24 @@
+# permissions for end users to edit virtulmachines.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: virtulmachine-editor-role
+rules:
+- apiGroups:
+  - infra.qipajun.com
+  resources:
+  - virtulmachines
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - infra.qipajun.com
+  resources:
+  - virtulmachines/status
+  verbs:
+  - get

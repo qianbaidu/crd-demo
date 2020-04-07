@@ -1,0 +1,7 @@
+domain: qipajun.com
+repo: github.com/qianbaidu/crd-demo
+resources:
+- group: infra
+  kind: VirtulMachine
+  version: v1
+version: "2"

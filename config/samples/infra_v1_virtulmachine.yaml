@@ -1,0 +1,9 @@
+apiVersion: infra.qipajun.com/v1
+kind: VirtulMachine
+metadata:
+  name: virtulmachine-sample
+spec:
+  # Add fields here
+  foo: bar
+  cpu: "1"
+  memory: "1G"
